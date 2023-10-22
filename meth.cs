@@ -111,13 +111,14 @@ namespace test
                     )
                     {
                         voicevoxlist.Enqueue(
-                         (BitConverter.ToInt32(new byte[] { receiveBytes[19], receiveBytes[20], 0, 0 }, 0),
-                          Encoding.UTF8.GetString(receiveBytes, 24, receiveBytes.Length - 24)
-                          )
-                          );
-
-                    };
-
+                            (
+                                BitConverter.ToInt32(new byte[] { receiveBytes[19], receiveBytes[20], 0, 0 }, 0),
+                                Encoding.UTF8.GetString(receiveBytes, 24, receiveBytes.Length - 24)
+                            )
+                        );
+                        UdpDestSocket.BeginReceive(new AsyncCallback(ReceiveCallback), null);
+                        return;
+                    }
                 }
 
             }
