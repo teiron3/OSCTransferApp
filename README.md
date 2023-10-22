@@ -36,7 +36,7 @@
 - uint32(voicevoxの読み上げキャラクターのID)
 - string(読み上げる文字列)
 
-読み上げの際はvoicevoxが起動され、VoicevoxのAPIの受信Portが50021のときのみ読み上げます。
+voicevoxが起動しており、APIの受信Portが50021のときのみ読み上げます。
 
 ## 設定項目
 ### このアプリからの送信ポート
