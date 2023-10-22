@@ -3,10 +3,9 @@
 ## このアプリについて
 バーチャルキャストのOSC機能から送信されたOSCパケットのOSCのアドレスに応じて送信先を変えるアプリです。
 
-また
+また、以下の機能もあります。
 - Sendkeysでアクティブウィンドウにキー送信する
 - Voicevoxに読み上げを行わせる
-機能もあります。
 
 勉強用で作ったアプリです。
 
@@ -33,10 +32,10 @@
 意図しないウィンドウがアクティブになっていてもそのウィンドウにキー送信することがありますので注意してください。
 
 ### アドレスが/voicevoxのみの場合
-データが
+データが次の2つだけの場合のみvoicevoxで読み上げを行います。
 - uint32(voicevoxの読み上げキャラクターのID)
 - string(読み上げる文字列)
-の2つだけの場合のみvoicevoxで読み上げを行います。
+
 読み上げの際はvoicevoxが起動され、VoicevoxのAPIの受信Portが50021のときのみ読み上げます。
 
 ## 設定項目
@@ -67,12 +66,16 @@ loopbackの場合はここで設定したポートではなく自動的にバー
 ### SendKeysを有効にする
 チェックされている場合のみSendKeys機能を有効にします。
 
-### VoiceVoxの音量
+### Voicevoxの音量
 Voicevoxで出力される音声の音量を調整します。
 
 ## License
 [MIT License](https://github.com/teiron3/OSCTestServer/blob/main/LICENSE)
 ## 外部参考リンク
 [バーチャルキャスト](https://virtualcast.jp/)
-[voicevox](https://voicevox.hiroshiba.jp/)
+
+
+[Voicevox](https://voicevox.hiroshiba.jp/)
+
+
 [Open Sound Control 1.0仕様](http://veritas-vos-liberabit.com/trans/OSC/OSC-spec-1_0.html)
